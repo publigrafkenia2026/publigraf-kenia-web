@@ -8,30 +8,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fb;
+background:#f4f7fb;
 color:#111;
 }
 
 header{
 position:fixed;
 top:0;
+left:0;
 width:100%;
-background:linear-gradient(90deg,#001d4d,#0b6bff);
-padding:15px 8%;
+padding:15px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+background:linear-gradient(90deg,#001f5c,#0b6bff);
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
+box-shadow:0 3px 10px rgba(0,0,0,.2);
 }
 
 .logo{
@@ -42,26 +44,26 @@ gap:15px;
 
 .logo img{
 width:80px;
-border-radius:50%;
 background:white;
 padding:5px;
+border-radius:50%;
 }
 
 .logo h1{
+font-size:28px;
 color:white;
-font-size:32px;
 font-weight:800;
 }
 
 .logo p{
-color:white;
 font-size:14px;
+color:white;
 }
 
 nav a{
-color:white;
-text-decoration:none;
 margin-left:25px;
+text-decoration:none;
+color:white;
 font-weight:600;
 transition:.3s;
 }
@@ -72,66 +74,67 @@ color:#00c3ff;
 
 .hero{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600');
-background-size:cover;
-background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600');
+background-size:cover;
+background-position:center;
 }
 
 .hero-content{
-max-width:900px;
+max-width:950px;
 }
 
 .hero h2{
-font-size:70px;
-color:#14b8ff;
+font-size:72px;
 font-weight:800;
-margin-bottom:20px;
+color:#19b5ff;
+margin-bottom:25px;
 }
 
 .hero p{
 font-size:28px;
+line-height:1.5;
 color:white;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
-padding:16px 35px;
-background:#14b8ff;
+padding:17px 38px;
+background:#19b5ff;
 color:white;
-border-radius:50px;
 text-decoration:none;
+border-radius:50px;
 font-weight:700;
 transition:.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
-background:#0b6bff;
+transform:translateY(-5px);
+background:#008cff;
 }
 
 section{
-padding:100px 8%;
+padding:100px 7%;
 }
 
 .section-title{
-text-align:center;
 font-size:45px;
-margin-bottom:50px;
-color:#001d4d;
 font-weight:800;
+text-align:center;
+margin-bottom:60px;
+color:#00245c;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
@@ -158,14 +161,14 @@ padding:25px;
 }
 
 .card-content h3{
-font-size:25px;
-margin-bottom:10px;
 color:#0b6bff;
+margin-bottom:12px;
+font-size:24px;
 }
 
 .card-content p{
 font-size:15px;
-line-height:1.6;
+line-height:1.7;
 }
 
 .about{
@@ -175,19 +178,24 @@ border-radius:25px;
 }
 
 .about h2{
-color:#14b8ff;
+color:#19b5ff;
 }
 
-.about-box{
+.about-container{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:40px;
 align-items:center;
 }
 
-.about-text p{
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about p{
+line-height:1.9;
 font-size:18px;
-line-height:1.8;
 }
 
 .contact{
@@ -208,25 +216,25 @@ margin-top:30px;
 }
 
 footer{
-background:#00112e;
-color:white;
-text-align:center;
+background:#00112f;
 padding:30px;
+text-align:center;
+color:white;
 }
 
 .whatsapp{
 position:fixed;
-right:25px;
 bottom:25px;
-background:#25d366;
-color:white;
-font-size:35px;
+right:25px;
 width:70px;
 height:70px;
+background:#25d366;
 display:flex;
 justify-content:center;
 align-items:center;
 border-radius:50%;
+font-size:35px;
+color:white;
 text-decoration:none;
 box-shadow:0 5px 15px rgba(0,0,0,.3);
 z-index:999;
@@ -240,30 +248,35 @@ gap:15px;
 }
 
 .hero h2{
-font-size:42px;
+font-size:45px;
 }
 
 .hero p{
 font-size:20px;
 }
 
-.logo h1{
-font-size:22px;
-}
-
 .section-title{
-font-size:35px;
+font-size:34px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">
 <img src="logo.jpg.jpg">
+
 <div>
 <h1>IMPRENTA PUBLIGRAF KENIA</h1>
 <p>Diseño • Impresión • Calidad</p>
@@ -276,20 +289,33 @@ font-size:35px;
 <a href="#nosotros">Nosotros</a>
 <a href="#contacto">Contacto</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h2>Impresión Profesional & Publicidad Creativa</h2>
-<p>Gigantografías, branding, banners, tarjetas, serigrafía y soluciones gráficas modernas.</p>
 
-<a class="btn" href="https://wa.me/51980700597?text=Hola%20quiero%20cotizar%20servicios%20de%20imprenta" target="_blank">
+<div class="hero-content">
+
+<h2>Impresión Profesional & Publicidad Creativa</h2>
+
+<p>
+Gigantografías, branding, merchandising,
+banners, tarjetas, sublimados y soluciones
+gráficas modernas para empresas y negocios.
+</p>
+
+<a class="btn"
+href="https://wa.me/51980700597?text=Hola%20quiero%20cotizar%20servicios"
+target="_blank">
 Solicitar Cotización
 </a>
+
 </div>
+
 </section>
 
 <section id="servicios">
+
 <h2 class="section-title">Nuestros Servicios</h2>
 
 <div class="services">
@@ -298,23 +324,23 @@ Solicitar Cotización
 <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=1200">
 <div class="card-content">
 <h3>Gigantografías</h3>
-<p>Impresiones de gran formato para empresas y negocios.</p>
+<p>Impresiones de gran formato para negocios, campañas y publicidad visual.</p>
 </div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200">
 <div class="card-content">
-<h3>Tarjetas</h3>
-<p>Tarjetas personales y corporativas premium.</p>
+<h3>Tarjetas Personales</h3>
+<p>Tarjetas corporativas premium con acabados profesionales.</p>
 </div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200">
 <div class="card-content">
-<h3>Serigrafía</h3>
-<p>Impresión personalizada para polos y merchandising.</p>
+<h3>Merchandising</h3>
+<p>Productos promocionales para empresas y campañas publicitarias.</p>
 </div>
 </div>
 
@@ -322,15 +348,15 @@ Solicitar Cotización
 <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200">
 <div class="card-content">
 <h3>Branding</h3>
-<p>Publicidad visual moderna para empresas.</p>
+<p>Diseño de identidad visual moderna y profesional.</p>
 </div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200">
 <div class="card-content">
-<h3>Banners & Letreros</h3>
-<p>Diseños impactantes para negocios y campañas.</p>
+<h3>Banners y Letreros</h3>
+<p>Publicidad visual para interiores y exteriores.</p>
 </div>
 </div>
 
@@ -338,34 +364,94 @@ Solicitar Cotización
 <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200">
 <div class="card-content">
 <h3>Calendarios 2027</h3>
-<p>Calendarios corporativos y promocionales personalizados.</p>
+<p>Calendarios corporativos y personalizados para empresas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200">
+<div class="card-content">
+<h3>Revistas y Catálogos</h3>
+<p>Impresión profesional de revistas comerciales y catálogos.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200">
+<div class="card-content">
+<h3>Libros & Cuadernos</h3>
+<p>Cuadernos anillados, libros corporativos y materiales educativos.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200">
+<div class="card-content">
+<h3>Sublimados</h3>
+<p>Polos, tazas y productos sublimados personalizados.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200">
+<div class="card-content">
+<h3>Folders Corporativos</h3>
+<p>Folders empresariales modernos y personalizados.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200">
+<div class="card-content">
+<h3>Afiches Publicitarios</h3>
+<p>Diseños publicitarios de alto impacto visual.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200">
+<div class="card-content">
+<h3>Llaveros e Imantados</h3>
+<p>Publicidad promocional creativa para empresas y eventos.</p>
 </div>
 </div>
 
 </div>
+
 </section>
 
 <section class="about" id="nosotros">
+
 <h2 class="section-title">¿Por Qué Elegirnos?</h2>
 
-<div class="about-box">
+<div class="about-container">
 
-<div class="about-text">
+<div>
 <p>
-✔ Atención rápida y personalizada.<br><br>
+
 ✔ Diseños modernos y profesionales.<br><br>
+
 ✔ Impresiones de alta calidad.<br><br>
-✔ Entregas puntuales.<br><br>
+
+✔ Atención rápida y personalizada.<br><br>
+
+✔ Publicidad visual moderna.<br><br>
+
+✔ Experiencia en impresión corporativa.<br><br>
+
 ✔ Atención en Centro de Lima.<br><br>
-✔ Más de 10 años de experiencia.
+
+✔ Calidad garantizada en cada trabajo.
+
 </p>
 </div>
 
 <div>
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200" style="width:100%;border-radius:20px;">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200">
 </div>
 
 </div>
+
 </section>
 
 <section class="contact" id="contacto">
@@ -374,11 +460,14 @@ Solicitar Cotización
 
 <p><strong>WhatsApp:</strong> 980700597</p>
 
-<p><strong>Dirección:</strong><br>
+<p>
+<strong>Dirección:</strong><br>
 AV. Bolivia 148 C. Comercial Centro Lima Stand: 272-F Primer Piso.
 </p>
 
-<a class="btn" href="https://wa.me/51980700597?text=Hola%20quiero%20información" target="_blank">
+<a class="btn"
+href="https://wa.me/51980700597?text=Hola%20quiero%20información"
+target="_blank">
 Hablar por WhatsApp
 </a>
 
@@ -387,10 +476,14 @@ Hablar por WhatsApp
 </section>
 
 <footer>
+
 © 2025 Imprenta Publigraf Kenia — Todos los derechos reservados.
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/51980700597?text=Hola%20quiero%20cotizar" target="_blank">
+<a class="whatsapp"
+href="https://wa.me/51980700597?text=Hola%20quiero%20cotizar"
+target="_blank">
 ✆
 </a>
 
