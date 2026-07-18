@@ -625,5 +625,124 @@ Hablar por WhatsApp
          style="width:36px;height:36px;">
 </a>
 
+ <!-- CÓDIGO DE VENTANA DE CHAT DIRECTO A WHATSAPP -->
+<style>
+  .floating-chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    font-family: 'Poppins', sans-serif;
+  }
+  .chat-trigger-btn {
+    background-color: #03A84E;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s;
+  }
+  .chat-trigger-btn:hover { transform: scale(1.05); }
+  .chat-window {
+    display: none;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.25);
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .chat-header {
+    background-color: #004B93;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chat-header span { font-size: 14px; }
+  .chat-close { cursor: pointer; font-size: 18px; }
+  .chat-body { padding: 15px; }
+  .chat-body p { font-size: 13px; margin-top: 0; color: #555; }
+  .chat-input-group { margin-bottom: 12px; }
+  .chat-input-group label { display: block; font-size: 12px; margin-bottom: 5px; font-weight: 600; color: #333; }
+  .chat-input-group input, .chat-input-group select {
+    width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 13px;
+  }
+  .chat-submit-btn {
+    width: 100%; background-color: #25D366; color: white; border: none; padding: 10px;
+    border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 14px;
+  }
+</style>
+
+<div class="floating-chat-container">
+  <!-- Ventana de Chat (Oculta por defecto) -->
+  <div class="chat-window" id="whatsappChatWindow">
+    <div class="chat-header">
+      <span>💬 Cotizaciones Publigraf Kenia</span>
+      <span class="chat-close" onclick="toggleWhatsappChat()">×</span>
+    </div>
+    <div class="chat-body">
+      <p>¡Hola! Déjanos tus datos para enviarte una cotización formal directo a tu WhatsApp.</p>
+      <div class="chat-input-group">
+        <label>Tu Nombre:</label>
+        <input type="text" id="waClientName" placeholder="Ej. Juan Pérez">
+      </div>
+      <div class="chat-input-group">
+        <label>¿Qué producto necesitas?</label>
+        <select id="waProductType">
+          <option value="Revistas y Catálogos">Revistas y Catálogos</option>
+          <option value="Cuadernos Corporativos">Cuadernos Corporativos</option>
+          <option value="Servicios de Sublimados">Servicios de Sublimados</option>
+          <option value="Otro Producto">Otro Servicio de Imprenta</option>
+        </select>
+      </div>
+      <button class="chat-submit-btn" onclick="sendWhatsappQuote()">Solicitar Cotización</button>
+    </div>
+  </div>
+
+  <!-- Botón Flotante que abre la ventana -->
+  <button class="chat-trigger-btn" onclick="toggleWhatsappChat()">
+    <span>💬 Cotizar en Vivo</span>
+  </button>
+</div>
+
+<script>
+  function toggleWhatsappChat() {
+    var chatWin = document.getElementById('whatsappChatWindow');
+    if(chatWin.style.display === 'block') {
+      chatWin.style.display = 'none';
+    } else {
+      chatWin.style.display = 'block';
+    }
+  }
+
+  function sendWhatsappQuote() {
+    var name = document.getElementById('waClientName').value;
+    var product = document.getElementById('waProductType').value;
+    
+    if(name.trim() === "") {
+      alert("Por favor, ingresa tu nombre para atenderte mejor.");
+      return;
+    }
+    
+    var baseText = "Hola Imprenta Publigraf Kenia, mi nombre es " + name + " y me gustaría solicitar una 
+      cotización para el servicio de: " + product + ".";
+    var encodedText = encodeURIComponent(baseText);
+    var whatsappUrl = "https://wa.me" + encodedText;
+    
+    window.open(whatsappUrl, '_blank');
+  }
+</script>
+<!-- FIN CÓDIGO DE VENTANA DE CHAT -->
+
 </body>
 </html>
