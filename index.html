@@ -729,21 +729,19 @@ Hablar por WhatsApp
     }
   }
 
-  function sendWhatsappQuote() {
-    var name = document.getElementById('waClientName').value;
-    var product = document.getElementById('waProductType').value;
-    
-    if(name.trim() === "") {
-      alert("Por favor, ingresa tu nombre para atenderte mejor.");
-      return;
-    }
-    
-    var baseText = "Hola Imprenta Publigraf Kenia, mi nombre es " + name + " y me gustaría solicitar una cotización para el servicio de: " + product + ".";
-    var encodedText = encodeURIComponent(baseText);
-    var whatsappUrl = "https://wa.me" + encodedText;
-    
-    window.open(whatsappUrl, '_blank');
+function sendWhatsappQuote() {
+  var miNumero = "51980700597";
+  var name = document.getElementById('waClientName').value;
+  var product = document.getElementById('waProductType').value;
+  if(name.trim() === "") {
+    alert("Por favor, ingresa tu nombre.");
+    return;
   }
+  var txt = "Hola Imprenta Publigraf Kenia, mi nombre es " + name + " y deseo cotizar: " + product;
+  var url = "https://wa.me/" + miNumero + "?text=" + encodeURIComponent(txt);
+  window.location.href = url;
+}
+  
 </script>
 <!-- FIN CÓDIGO FINAL DE CHAT -->
 
