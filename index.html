@@ -598,7 +598,7 @@ Hablar por WhatsApp
   
        <a href="https://facebook.com" 
        target="_blank" 
-       style="position: fixed; bottom: 105px; right: 20px; width: 70px; height: 70px; z-index:
+       style="position: fixed; bottom: 160px; right: 20px; width: 70px; height: 70px; z-index:
          1000; display: flex; justify-content: center; align-items: center;">
         <img src="facebook.png.png" 
              alt="Imprenta Publigraf Kenia" 
@@ -625,13 +625,13 @@ Hablar por WhatsApp
          style="width:36px;height:36px;">
 </a>
 
-<!-- CÓDIGO DE VENTANA DE CHAT DIRECTO A WHATSAPP CORREGIDO -->
+<!-- CÓDIGO FINAL DE CHAT DIRECTO A WHATSAPP PUBLIGRAF KENIA -->
 <style>
   .floating-chat-container {
     position: fixed;
-    bottom: 90px; /* SUBIDO PARA QUE NO TAPE EL BOTÓN DE ABAJO */
+    bottom: 90px;
     right: 20px;
-    z-index: 9999999 !important; /* MÁXIMA PRIORIDAD DE CLIC */
+    z-index: 999999999 !important;
     font-family: 'Poppins', sans-serif;
   }
   .chat-trigger-btn {
@@ -680,11 +680,11 @@ Hablar por WhatsApp
   .chat-submit-btn {
     width: 100%; background-color: #25D366; color: white; border: none; padding: 10px;
     border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 14px;
+    position: relative; z-index: 999999999 !important;
   }
 </style>
 
 <div class="floating-chat-container">
-  <!-- Ventana de Chat (Oculta por defecto) -->
   <div class="chat-window" id="whatsappChatWindow">
     <div class="chat-header">
       <span>💬 Cotizaciones Publigraf Kenia</span>
@@ -712,7 +712,6 @@ Hablar por WhatsApp
     </div>
   </div>
 
-  <!-- Botón Flotante que abre la ventana -->
   <button class="chat-trigger-btn" onclick="toggleWhatsappChat()">
     <span>💬 Cotizar en Vivo</span>
   </button>
@@ -744,7 +743,7 @@ Hablar por WhatsApp
     window.open(whatsappUrl, '_blank');
   }
 </script>
-<!-- FIN CÓDIGO DE VENTANA DE CHAT -->
+<!-- FIN CÓDIGO FINAL DE CHAT -->
 
 </body>
 </html>
